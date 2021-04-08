@@ -1,0 +1,34 @@
+// Two slashes is the conventional comment.
+// No multiline comments yet.
+
+contract Doge {
+
+    // sign is the conventional constructor
+    _sign(n, b, h, c) {
+
+        // variables are defined with <-
+        self.name   <- n;
+        self.breed  <- b;
+        self.height <- h;
+        self.color  <- c;
+    }
+
+    printInfo() {
+
+        // log is used to print to the console. 
+        // You can wrap with parenthesis, but it 
+        // is not required.
+        log "NAME:   " + self.name;
+        log("BREED:  " + self.breed);
+        log "HEIGHT: " + self.height;
+        log("COLOR:  " + self.color);
+    }
+}
+
+method generate_remi() {
+    let remi <- Doge();
+    remi._sign("Remi", "Generic Pupper Doge", 42, "purple");
+    remi.printInfo();
+}
+
+generate_remi();
